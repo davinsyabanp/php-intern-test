@@ -78,11 +78,3 @@ Set `EMPLOYEE_UPLOAD_DISK=s3` lalu isi variabel AWS/endpoint MinIO di `.env` (`A
 redis-cli GET emp_EMP001
 ```
 Setelah delete, key harus `nil`.
-
-## Push ke GitHub
-```
-git remote add origin https://github.com/[your-github-account]/php-intern-test.git
-git add .
-git commit -m "Employees API CRUD with upload + Redis cache"
-git push -u origin main
-```
