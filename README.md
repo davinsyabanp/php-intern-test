@@ -1,8 +1,8 @@
 # PHP Intern Test
 
 Repo ini berisi dua bagian:
+- `x_o_pattern.php`: Skrip terpisah untuk soal No.1 pola X-O
 - `employees-api/`: Aplikasi Laravel CRUD Employees dengan upload foto (S3/Local) dan cache Redis per `emp_<nomor>`
-- `x_o_pattern.php`: Skrip terpisah untuk soal pola X-O (jika diperlukan)
 
 ## Fitur (Employees API)
 - CRUD `employees` (kolom: `nomor`, `nama`, `jabatan`, `talahir`, dst)
