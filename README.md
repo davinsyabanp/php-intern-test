@@ -86,4 +86,3 @@ git add .
 git commit -m "Employees API CRUD with upload + Redis cache"
 git push -u origin main
 ```
-Undang user `asiasiapac` sebagai collaborator.
