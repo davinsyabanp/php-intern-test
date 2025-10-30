@@ -102,8 +102,15 @@ class EmployeeController extends Controller
 
     private function uploadToS3AndGetUrl($file): string
     {
-        $path = Storage::disk('s3')->putFile('employees', $file, 'public');
-        return Storage::disk('s3')->url($path);
+        $disk = env('EMPLOYEE_UPLOAD_DISK', 's3');
+        if ($disk === 's3') {
+            $path = Storage::disk('s3')->putFile('employees', $file, 'public');
+            return Storage::disk('s3')->url($path);
+        }
+
+        // fallback ke disk public lokal (butuh "php artisan storage:link")
+        $path = Storage::disk('public')->putFile('employees', $file);
+        return Storage::disk('public')->url($path);
     }
 
     private function writeCache(Employee $employee): void
